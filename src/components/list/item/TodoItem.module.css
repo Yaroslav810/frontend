@@ -1,0 +1,11 @@
+.item {
+    display: flex;
+    margin-top: 10px;
+    background: aqua;
+}
+
+.button {
+    margin-left: auto;
+    background: red;
+    border: none;
+}

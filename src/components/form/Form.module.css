@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+}
+
+.input {
+    flex: 1;
+}
+
+.button {
+    margin-left: 10px;
+    background: orange;
+}
