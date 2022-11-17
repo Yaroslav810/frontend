@@ -1,5 +1,7 @@
 import {Todo} from "../../../types"
 import styles from "./TodoItem.module.css"
+import {dispatch} from "../../../state";
+import {changeDone, deleteTodo} from "../../../actions/todos";
 
 type TodoItemProps = {
     todo: Todo,
@@ -13,11 +15,11 @@ function TodoItem(props: TodoItemProps) {
             <input
                 type="checkbox"
                 checked={done}
-                onChange={() => console.log(`toggle ${id}`)}
+                onChange={() => dispatch(changeDone, id)}
             />
-            {title}
+            <span className={done ? styles.done : ''}>{title}</span>
             <button
-                onClick={() => console.log(`deleted ${id}`)}
+                onClick={() => dispatch(deleteTodo, id)}
                 className={styles.button}
             >
                 Удалить

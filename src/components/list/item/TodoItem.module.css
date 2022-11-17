@@ -9,3 +9,7 @@
     background: red;
     border: none;
 }
+
+.done {
+    text-decoration: line-through;
+}
